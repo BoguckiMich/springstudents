@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Multable</title>
+</head>
+<body>
+
+<hr>
+<table>
+    <tr th:each="xit: ${#numbers.sequence(0, rozmiar_x)}">
+        <td th:each="yit: ${#numbers.sequence(0, rozmiar_y)}">
+            <span th:text="${xit*yit}"></span>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
