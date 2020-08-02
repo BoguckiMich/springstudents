@@ -62,3 +62,19 @@
     }
 }
 .overflow-hidden { overflow: hidden; }
+
+.rowelement:nth-child(odd) {
+    background-color: #e5e5e5;
+}
+.rowelement:nth-child(even) {
+    background-color: azure;
+}
+.rowelement:nth-child(even):hover {
+    background-color: aqua;
+}
+.rowelement:nth-child(odd):hover {
+    background-color: aqua;
+}
+.rowheader {
+    background-color: beige;
+}

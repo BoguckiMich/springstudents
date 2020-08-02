@@ -29,7 +29,7 @@ public class Student {
     private String indexNumber; //unikalny
     private String firstName;
     private String lastName;
-    @Formula(value = "(select avg(g.value) from Grade g where g.student_id=id)")
+    @Formula(value = "(select avg(g.value) from grade g where g.student_id=id)")
     private Double average;
 
     @Enumerated(EnumType.STRING)
