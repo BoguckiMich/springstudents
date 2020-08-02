@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Form</title>
+</head>
+<body>
+
+    <form th:action="@{/student}" method="post" th:object="${student}">
+
+    <label for="studentIndex">Index:</label>
+    <input id="studentIndex" name="studentIndex" type="text" th:field="*{indexNumber}"><br/>
+
+    <label for="firstName">First name:</label>
+    <input id="firstName" name="firstName" type="text" th:field="*{firstName}"><br/>
+
+    <label for="lastName">Last name:</label>
+    <input id="lastName" name="lastName" type="text" th:field="*{lastName}"><br/>
+
+    <label for="gender">Gender:</label>
+    <select name="gender" id="gender" th:field="*{gender}">
+        <option value="MALE">Male</option>
+        <option value="FEMALE"> Female</option>
+    </select><br/>
+
+    <label for="active">Is Active:</label>
+    <input id="active" name="active" type="checkbox" th:field="*{active}"><br/>
+
+    <input type="submit">
+    </form>
+    </body>
+</html>

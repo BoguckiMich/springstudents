@@ -5,11 +5,21 @@
     <title>Multable</title>
 </head>
 <body>
-
+<form th:action="@{/multable}" method="get">
+    <div>
+        <label for="x"> X:</label>
+        <input id="x" name="x" type="number" min="1">
+    </div>
+    <div>
+        <label for="y"> Y:</label>
+        <input id="y" name="y" type="number" min="1">
+    </div>
+    <input type="submit">
+</form>
 <hr>
 <table>
-    <tr th:each="xit: ${#numbers.sequence(0, rozmiar_x)}">
-        <td th:each="yit: ${#numbers.sequence(0, rozmiar_y)}">
+    <tr th:each="xit: ${#numbers.sequence(1, rozmiar_x)}">
+        <td th:each="yit: ${#numbers.sequence(1, rozmiar_y)}">
             <span th:text="${xit*yit}"></span>
         </td>
     </tr>
